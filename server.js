@@ -1,16 +1,21 @@
 var express = require("express");
 var app = express();
-
+var path = require("path");
 app.set("view engine", "ejs");
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(path.join(__dirname, "public")));
+
+// app.use(express.static("public"));
 
 app.get("/", function (req, res) {
-    res.render("pages/index");
+    // let rno = Math.floor(Math.random() * 11);
+    let rno = Math.floor(Math.random() * 11);
+    console.log(rno);
+    res.render("pages/index", { rno: rno });
 });
 
-app.get("/about", function (req, res) {
-    res.render("pages/about");
+app.get("/donate", function (req, res) {
+    res.render("pages/donate");
 });
 
 app.listen(8080);

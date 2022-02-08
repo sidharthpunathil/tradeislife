@@ -1,3 +1,10 @@
 html {
-    background-color: gray;
+    background-color: rgb(223, 223, 223);
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    align-items: center;
+    width: 100%;
+    text-align: center;
 }

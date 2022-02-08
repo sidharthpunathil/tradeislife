@@ -2,15 +2,31 @@
 <html lang="en">
     <head>
         <link href="/css/style.css" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body class="container">
         <header><%- include('../partials/header'); %></header>
 
         <main>
-            <h2>Which one discribes you the best?</h2>
-            <div class="box">
-                <a> </a>
-            </div>
+            <h2 class="heading">
+                You want to make a cool webapp but you are into trading. <3
+            </h2>
+
+            <img class="image" src="images/<%= rno %>.jpg" />
+            <a href="#"> </a>
         </main>
+        <p id="main"></p>
     </body>
 </html>
+
+<script>
+    if(0 == <%= rno %>) {
+        console.log("simp!");
+        document.getElementById("main").innerHTML = "Easter Egg found! it's your lucky day.";
+    }
+</script>
