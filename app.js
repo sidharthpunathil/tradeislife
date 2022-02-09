@@ -18,5 +18,9 @@ app.get("/donate", function (req, res) {
     res.render("pages/donate");
 });
 
-app.listen(8080);
-console.log("Server is listening on port 8080");
+// Establishing the port
+const PORT = process.env.PORT ||3000;
+ 
+// Executing the server on given port number
+app.listen(PORT, console.log(
+  `Server started on port ${PORT}`));
